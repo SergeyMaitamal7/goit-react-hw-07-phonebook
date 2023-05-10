@@ -10,6 +10,12 @@ export const ItemContact = ({ contact }) => {
     </>
   );
 };
+
 ItemContact.prototype = {
-  contact: PropTypes.object,
+  contacts: PropTypes.objectOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      number: PropTypes.string,
+    })
+  ),
 };
